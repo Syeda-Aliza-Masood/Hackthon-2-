@@ -1,32 +1,29 @@
 "use client";
 import Image from "next/image"; // Import Image for optimized images
-
-// Make sure the paths are correct for your images
-import ShopImage from "@/Pictures/shophero.png"; // Check the path to your image
-// Import the BlowHero component if needed (this import is unused in the code)
-import BlowHero from "@/components/ShopBlowHero"; 
+import ShopImage from "@/Pictures/shophero.png"; // Import the shop hero image (check the path)
 
 export default function Contact() {
   return (
     <div>
-      {/* Heading and Line Below the Image */}
+      {/* Hero Section */}
       <div className="relative">
-        <Image 
-          src={ShopImage} 
-          alt="Shop Hero" 
-          width={1440} 
-          height={400} 
-          className="w-full h-auto" 
+        <Image
+          src={ShopImage}
+          alt="Shop Hero"
+          width={1440}
+          height={400}
+          className="w-full h-auto"
+          priority
         />
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center px-4">
-          <h2 className="text-3xl font-bold text-black font-poppins">Contact</h2>
-          <p className="mt-2 text-black">Home {">"} Contact</p>
+          <h2 className="text-3xl font-bold text-black font-poppins">Blog</h2>
+          <p className="mt-2 text-black">Home {">"} Blog</p>
         </div>
       </div>
 
-      {/* New Div with Size 1440px x 1144px */}
+      {/* Content Section */}
       <div className="w-full max-w-screen-xl mx-auto bg-white px-4 sm:px-8 md:px-16 lg:px-20">
-        {/* Content goes here */}
+        {/* Introduction */}
         <div className="text-center mt-6">
           <h1 className="text-3xl font-bold font-poppins">Get In Touch With Us</h1>
           <p className="mt-2 text-gray-600 text-sm max-w-2xl mx-auto">
@@ -35,11 +32,10 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Contact Section - Flexbox with 2 centered columns */}
+        {/* Contact Details and Form */}
         <div className="flex flex-col sm:flex-row justify-center gap-8 py-12">
-          {/* Left Column */}
+          {/* Left Column: Contact Details */}
           <div className="w-full sm:w-1/2 max-w-md space-y-6">
-            {/* Contact details */}
             <div>
               <h3 className="font-semibold">Address</h3>
               <p>236 5th SE Avenue</p>
@@ -58,7 +54,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Column */}
+          {/* Right Column: Contact Form */}
           <div className="w-full sm:w-1/2 max-w-md space-y-6">
             <form className="space-y-4">
               {/* Name */}
@@ -116,17 +112,17 @@ export default function Contact() {
             </form>
           </div>
         </div>
+      </div>
 
-        {/* Full-Width Image Below Pagination */}
-        <div className="mt-8">
-          <Image
-            src="/Frame.png" // Ensure the image path is correct in the public folder
-            alt="Additional Banner"
-            width={1440}
-            height={270}
-            className="w-[1440]" // Make the image span the full width of the screen
-          />
-        </div>
+      {/* Footer Image Section */}
+      <div className="mt-8">
+        <Image
+          src="/Frame.png"
+          alt="Additional Banner"
+          width={1440}
+          height={270}
+          className="w-full"
+        />
       </div>
     </div>
   );
