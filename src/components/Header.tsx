@@ -37,7 +37,9 @@ export default function Header() {
         <MdPersonOutline />
         <CiSearch />
         <GoHeart />
+        <Link href={'/cart'}>
         <AiOutlineShoppingCart />
+        </Link>
 
         </div>
 

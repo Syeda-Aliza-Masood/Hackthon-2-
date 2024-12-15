@@ -1,22 +1,21 @@
 "use client";
 import Image from "next/image"; // Import Image for optimized images
 import ShopImage from "@/Pictures/shophero.png"; // Import the shop hero image (check the path)
-
+import Subfooter from "@/components/Subfooter";
+import { IoIosArrowForward } from "react-icons/io";
 export default function Contact() {
   return (
     <div>
-      {/* Heading and Line Below the Image */}
+      {/* Hero Section */}
       <div className="relative">
-        <Image 
-          src={ShopImage} 
-          alt="Shop Hero" 
-          width={1440} 
-          height={400} 
-          className="w-full h-auto" 
-        />
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center px-4">
-          <h2 className="text-3xl font-bold text-black font-poppins">Blog</h2>
-          <p className="mt-2 text-black">Home {">"} Blog</p>
+        <Image src={ShopImage} alt="Contact Hero" layout="responsive" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+          <h3 className="font-bold text-[1.5rem] text-black">Blog</h3>
+          <div className="flex items-center space-x-2 text-Black">
+            <h3>Home</h3>
+            <IoIosArrowForward />
+            <h3>Blog</h3>
+          </div>
         </div>
       </div>
 
@@ -101,15 +100,9 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Image Below Pagination */}
-      <div className="mt-8">
-        <Image
-          src="/Frame.png" // Ensure the image path is correct in the public folder
-          alt="Additional Banner"
-          width={1440}
-          height={270}
-          className="w-full" // Make the image span the full width of the screen
-        />
+      {/* Add margin-top for spacing above Subfooter */}
+      <div className="mt-12">
+        <Subfooter />
       </div>
     </div>
   );
