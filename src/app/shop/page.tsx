@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 "use client";
-=======
-"use client"
->>>>>>> 601b600d9ce0297b408109dab650eb12e282045b
+
 import { useState } from "react"; // Import useState for state management
 import Image from "next/image"; // Import Image for optimized images
 import ShopImage from "@/Pictures/shophero.png"; // Import the shop hero image (check the path)
 import BlowHero from "@/components/ShopBlowHero"; // Import the BlowHero component
 import Link from "next/link"; // Import Link for client-side routing
-<<<<<<< HEAD
-import Subfooter from "@/components/Subfooter";
-import { IoIosArrowForward } from "react-icons/io";
-=======
->>>>>>> 601b600d9ce0297b408109dab650eb12e282045b
+import Subfooter from "@/components/Subfooter"; // Import Subfooter component
+import { IoIosArrowForward } from "react-icons/io"; // Import arrow icon
 
 interface Card {
   name: string;
@@ -47,19 +41,18 @@ const data: Card[] = [
   { name: "Jane Smith", price: "Rp 2.500.000", age: 25, image: "2.png", description: "A creative designer" },
   { name: "Sam Wilson", price: "Rp 2.500.000", age: 28, image: "3.png", description: "Software engineer" },
   { name: "Alex Walker", price: "Rp 2.500.000", age: 35, image: "4.png", description: "Project Manager" },
-<<<<<<< HEAD
-=======
-  // Add more data if needed
->>>>>>> 601b600d9ce0297b408109dab650eb12e282045b
+  { name: "Syltherine", price: "Rp 2.500.000", age: 30, image: "1.png", description: "Stylish cafe chair" },
+  { name: "Jane Smith", price: "Rp 2.500.000", age: 25, image: "2.png", description: "A creative designer" },
+  { name: "Sam Wilson", price: "Rp 2.500.000", age: 28, image: "3.png", description: "Software engineer" },
+  { name: "Alex Walker", price: "Rp 2.500.000", age: 35, image: "4.png", description: "Project Manager" },
+  // Add more items as needed
 ];
 
 export default function ShopHero() {
-  // State for pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 16; // Number of items per page
-  const totalPages = Math.ceil(data.length / itemsPerPage); // Total number of pages
+  const itemsPerPage = 16;
+  const totalPages = Math.ceil(data.length / itemsPerPage);
 
-  // Logic for pagination
   const goToPrevPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
@@ -68,58 +61,27 @@ export default function ShopHero() {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
-  // Get items for the current page
   const displayedData = data.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
     <>
-<<<<<<< HEAD
       <div>
         {/* Hero Section */}
         <div className="relative">
-          <Image src={ShopImage} alt="Contact Hero" layout="responsive" />
+          <Image src={ShopImage} alt="Shop Hero" layout="responsive" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
             <h3 className="font-bold text-[1.5rem] text-black">Shop</h3>
             <div className="flex items-center space-x-2 text-black">
               <h3>Home</h3>
               <IoIosArrowForward />
               <h3>Shop</h3>
-=======
-      <div className="shopsect">
-        <Image src={ShopImage} alt="Shop" />
-        <h3 className="font-bold text-[1.5rem]">Shop</h3>
-        <h5 className="shopPara">
-          <p className="mt-2 text-black">Home {">"} Contact</p>
-        </h5>
-      </div>
-
-      <BlowHero />
-      <div className="cardsContainer">
-        {displayedData.map((card, index) => (
-          <div className="card" key={index} style={{ width: "15rem" }}>
-            <Link href={`/product/${card.name.toLowerCase().replace(" ", "-")}`}>
-              <img
-                src={card.image}
-                style={{ width: "18rem", height: "18rem" }}
-                className="card-img-top"
-                alt={card.name}
-              />
-            </Link>
-            <div className="card-body">
-              <h5 className="card-title" style={{ fontWeight: "bold" }}>
-                {card.name}
-              </h5>
-              <p className="card-text">{card.description}</p>
-              <h5 className="card-title" style={{ fontWeight: "bold" }}>
-                {card.price}
-              </h5>
->>>>>>> 601b600d9ce0297b408109dab650eb12e282045b
             </div>
           </div>
         </div>
 
         <BlowHero />
 
+        {/* Cards Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {displayedData.map((card, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -152,6 +114,7 @@ export default function ShopHero() {
           ))}
         </div>
 
+        {/* Pagination */}
         <div className="flex justify-center items-center space-x-4 mt-8 mb-12">
           <button
             onClick={goToPrevPage}
@@ -172,6 +135,7 @@ export default function ShopHero() {
           </button>
         </div>
 
+        {/* Footer */}
         <div className="mt-12">
           <Subfooter />
         </div>

@@ -26,7 +26,7 @@ export default function Confirmation() {
       {/* Confirmation Content */}
       <div className="container py-12 px-6">
         <h3 className="text-2xl font-bold text-center">Thank you for your order!</h3>
-        <p className="text-center mt-4 text-lg">Your order has been successfully placed. We will notify you once it's on its way.</p>
+        <p className="text-center mt-4 text-lg">Your order has been successfully placed. We will notify you once its on its way.</p>
 
         <div className="mt-8">
           {/* You can display order details here */}

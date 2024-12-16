@@ -16,7 +16,35 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import HeroSection  from "./hero-section"
+
+// Placeholder for HeroSection if the actual file is missing
+function HeroSection({
+  title,
+  breadcrumbItems,
+  className,
+}: {
+  title: string
+  breadcrumbItems: Array<{ href: string; label: string }>
+  className?: string
+}) {
+  return (
+    <div className={className}>
+      <h1 className="text-xl font-bold">{title}</h1>
+      <Breadcrumb>
+        {breadcrumbItems.map((item, index) => (
+          <BreadcrumbItem key={index}>
+            <BreadcrumbLink href={item.href}>
+              {item.label}
+            </BreadcrumbLink>
+            {index < breadcrumbItems.length - 1 && (
+              <BreadcrumbSeparator />
+            )}
+          </BreadcrumbItem>
+        ))}
+      </Breadcrumb>
+    </div>
+  )
+}
 
 interface ShopHeaderProps {
   title: string
@@ -136,4 +164,3 @@ export function ShopHeader({
     </div>
   )
 }
-

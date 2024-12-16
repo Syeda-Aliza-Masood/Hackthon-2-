@@ -161,9 +161,13 @@ export default function CheckoutPage() {
                     .
                   </div>
   
-                  <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black" onClick={handlePlaceOrder}>"
-                    Place order
-                  </Button>
+                <Button
+                  className="w-full bg-yellow-400 hover:bg-yellow-500 text-black"
+                  onClick={handlePlaceOrder}
+                >
+                  Place order
+                </Button>
+
                 </div>
               </Card>
             </div>

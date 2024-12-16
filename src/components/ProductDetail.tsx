@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface ProductDetailsProps {}
@@ -23,14 +23,14 @@ const ProductDetails: React.FC<ProductDetailsProps> = () => {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left - Product Images */}
           <div className="flex flex-col bg-[#F9F1E7] space-y-4 lg:w-1/2">
-            <img
+            <Image
               src="/sofa1.png"
               alt="Asgaard Sofa"
               className="rounded-lg w-full"
             />
             <div className="flex space-x-2 justify-center lg:justify-start">
               {["/sofa1.png", "/sofa2.png", "/sofa4.png"].map((src, index) => (
-                <img
+                <Image
                   key={index}
                   src={src}
                   alt={`Thumbnail ${index + 1}`}
