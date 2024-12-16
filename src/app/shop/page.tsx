@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 "use client";
+=======
+"use client"
+>>>>>>> 601b600d9ce0297b408109dab650eb12e282045b
 import { useState } from "react"; // Import useState for state management
 import Image from "next/image"; // Import Image for optimized images
 import ShopImage from "@/Pictures/shophero.png"; // Import the shop hero image (check the path)
 import BlowHero from "@/components/ShopBlowHero"; // Import the BlowHero component
 import Link from "next/link"; // Import Link for client-side routing
+<<<<<<< HEAD
 import Subfooter from "@/components/Subfooter";
 import { IoIosArrowForward } from "react-icons/io";
+=======
+>>>>>>> 601b600d9ce0297b408109dab650eb12e282045b
 
 interface Card {
   name: string;
@@ -40,6 +47,10 @@ const data: Card[] = [
   { name: "Jane Smith", price: "Rp 2.500.000", age: 25, image: "2.png", description: "A creative designer" },
   { name: "Sam Wilson", price: "Rp 2.500.000", age: 28, image: "3.png", description: "Software engineer" },
   { name: "Alex Walker", price: "Rp 2.500.000", age: 35, image: "4.png", description: "Project Manager" },
+<<<<<<< HEAD
+=======
+  // Add more data if needed
+>>>>>>> 601b600d9ce0297b408109dab650eb12e282045b
 ];
 
 export default function ShopHero() {
@@ -62,6 +73,7 @@ export default function ShopHero() {
 
   return (
     <>
+<<<<<<< HEAD
       <div>
         {/* Hero Section */}
         <div className="relative">
@@ -72,6 +84,36 @@ export default function ShopHero() {
               <h3>Home</h3>
               <IoIosArrowForward />
               <h3>Shop</h3>
+=======
+      <div className="shopsect">
+        <Image src={ShopImage} alt="Shop" />
+        <h3 className="font-bold text-[1.5rem]">Shop</h3>
+        <h5 className="shopPara">
+          <p className="mt-2 text-black">Home {">"} Contact</p>
+        </h5>
+      </div>
+
+      <BlowHero />
+      <div className="cardsContainer">
+        {displayedData.map((card, index) => (
+          <div className="card" key={index} style={{ width: "15rem" }}>
+            <Link href={`/product/${card.name.toLowerCase().replace(" ", "-")}`}>
+              <img
+                src={card.image}
+                style={{ width: "18rem", height: "18rem" }}
+                className="card-img-top"
+                alt={card.name}
+              />
+            </Link>
+            <div className="card-body">
+              <h5 className="card-title" style={{ fontWeight: "bold" }}>
+                {card.name}
+              </h5>
+              <p className="card-text">{card.description}</p>
+              <h5 className="card-title" style={{ fontWeight: "bold" }}>
+                {card.price}
+              </h5>
+>>>>>>> 601b600d9ce0297b408109dab650eb12e282045b
             </div>
           </div>
         </div>

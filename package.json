@@ -23,9 +23,13 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.4.0",
+<<<<<<< HEAD
     "react-router-dom": "^7.0.2",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
+=======
+    "react-router-dom": "^7.0.2"
+>>>>>>> 601b600d9ce0297b408109dab650eb12e282045b
   },
   "devDependencies": {
     "@types/node": "^20",
