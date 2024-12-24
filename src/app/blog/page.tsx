@@ -3,6 +3,7 @@ import Image from "next/image"; // Import Image for optimized images
 import ShopImage from "@/Pictures/shophero.png"; // Import the shop hero image (check the path)
 import Subfooter from "@/components/Subfooter";
 import { IoIosArrowForward } from "react-icons/io";
+
 export default function Contact() {
   return (
     <div>
@@ -23,13 +24,13 @@ export default function Contact() {
       <div className="flex justify-center px-[10%] py-8 bg-white">
         {/* Left Section (65%) with Image */}
         <div className="w-[65%] bg-white p-4 shadow-lg">
-          <div className="relative w-full h-[2490px] overflow-hidden">
+          <div className="relative w-full overflow-hidden">
             <Image
               src="/blog.png" // Replace with the correct image path
               alt="Blog Left Image"
               width={820} // Set an appropriate width for the image
-              height={2490} // Set the height to 2490px
-              className="w-full h-auto object-cover rounded-md" // Adjust the image to fit the container
+              height={0} // Automatically calculate height based on the image's aspect ratio
+              className="w-full h-auto object-cover rounded-md" // Automatically adjust height to maintain aspect ratio
             />
           </div>
         </div>
@@ -81,7 +82,13 @@ export default function Contact() {
           <div>
             <h2 className="text-2xl font-bold mb-4">Recent Posts</h2>
             <ul className="space-y-4">
-              {["post1.png", "post2.png", "post3.png", "post4.png", "post5.png"].map((post, index) => (
+              {[
+                "post1.png",
+                "post2.png",
+                "post3.png",
+                "post4.png",
+                "post5.png",
+              ].map((post, index) => (
                 <li
                   key={index}
                   className="relative overflow-hidden rounded-md group"

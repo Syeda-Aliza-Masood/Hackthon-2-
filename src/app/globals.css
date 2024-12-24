@@ -128,22 +128,6 @@
   left: 50%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer{
   display: flex;
   justify-content: space-around;
@@ -233,5 +217,7 @@ footer .para p{
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  
   }
 }
