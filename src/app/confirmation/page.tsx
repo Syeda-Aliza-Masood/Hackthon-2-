@@ -46,15 +46,6 @@ export default function Confirmation() {
               </TableRow>
             </TableBody>
           </Table>
-
-          {/* Action buttons */}
-          <div className="mt-6 text-center">
-         
-
-            <Link href="/comparison" className="ml-4">
-              <Button className="bg-yellow-400 hover:bg-yellow-500 text-black">Comparison</Button>
-            </Link>
-          </div>
         </div>
       </div>
     

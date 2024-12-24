@@ -131,7 +131,9 @@ export default function ProductPage() {
                   </Button>
                 </div>
                 <Button onClick={handleAddToCart} className="flex-1">Add To Cart</Button>
-                <Button variant="outline">+ Compare</Button>
+                <Link href="/comparison" className="ml-4">
+   <Button className="bg-yellow-400 hover:bg-yellow-500 text-black">Comparison</Button>
+ </Link>
               </div>
             </div>
           </div>
@@ -140,3 +142,4 @@ export default function ProductPage() {
     </div>
   )
 }
+ 
